@@ -1,0 +1,390 @@
+/* a minimalist set of CSS resets */
+
+:root{
+  background-color:black;
+  
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  src: url('https://cdn.glitch.global/5e279275-4aaa-4135-863b-4cbb5ea611ee/Montserrat-VariableFont_wght.ttf?v=1697140415521')
+}
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  
+  /*grayscale from here https://stackoverflow.com/questions/30192221/is-it-possible-to-turn-an-entire-webpage-to-grayscale-using-css, but it doesn't work too well*/
+/*   -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray; 
+    filter: grayscale(100%); */
+  
+}
+
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 0px;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.5;
+  color: white;
+  
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+#c{
+/*   background: url(https://cdn.glitch.global/5728b93c-b8f2-4255-a5f9-43e1c4cc8f64/Normal_icon_LA.png?v=1699917472645);
+  background-repeat: no-repeat;
+  background-position: center;  */
+  background-color: black;
+/*   background-size: 40vw 40vh; */
+}
+
+.title{
+
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  overflow-wrap: break-word;
+}
+
+.introContainer{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+/*   font-size: 150%; */
+/*   width: 100vw; */
+}
+
+.intro{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   font-size: 150%; */
+  width: 80vw;
+  text-align: center;
+}
+
+.type{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   font-size: 150%; */
+  text-align: center;
+  padding-top: 10px;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.group{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+button{
+  font-family: Montserrat, sans-serif;
+  font-size: 120%;
+  border-radius: 5px;
+
+}
+
+#normalButton{
+  background-color: #A8A878;
+  border-color:#6D6D4E;
+}
+
+#fightingButton{
+  background-color: #C03028;
+  border-color:#7D1F1A;
+  color:white;
+}
+
+#flyingButton{
+  background-color: #A890F0;
+  border-color:#6D5E9C;
+}
+
+#poisonButton{
+  background-color: #A040A0;
+  border-color:#682A68;
+  color:white;
+}
+
+#groundButton{
+  background-color: #E0C068;
+  border-color:#927D44;
+}
+
+#rockButton{
+  background-color: #927D44;
+  border-color:#786824;
+}
+
+#bugButton{
+  background-color:#A8B820;
+  border-color:#6D7815;
+}
+
+#ghostButton{
+  background-color:#705898;
+  border-color:#493963;
+  color:white;
+}
+
+#steelButton{
+  background-color:#B8B8D0;
+  border-color:#787887;
+}
+
+#fireButton{
+  background-color:#F08030;
+  border-color:#9C531F;
+}
+
+#waterButton{
+  background-color:#6890F0;
+  border-color:#445E9C;
+}
+
+#grassButton{
+  background-color:#78C850;
+  border-color:#4E8234;
+}
+
+#electricButton{
+  background-color:#F8D030;
+  border-color:#A1871F;
+}
+
+#psychicButton{
+  background-color: #F85888;
+  border-color:#A13959;
+}
+
+#iceButton{
+  background-color:#98D8D8;
+  border-color:#638D8D;
+}
+
+#dragonButton{
+  background-color:#7038F8;
+  border-color:#4924A1;
+  color:white;
+}
+
+#darkButton{
+  background-color:#705848;
+  border-color:#49392F;
+  color:white;
+}
+
+#fairyButton{
+  background-color:#EE99AC;
+  border-color:#9B6470;
+}
+
+.labels{
+
+  display:flex;
+  column-gap: calc( (calc(100vw - 30px)) * 0.106 - 24px);
+  align-items:center;
+  justify-content: center;
+}
+
+.statGroup{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+.hidden{
+  display:none;
+}
+
+
+@media only screen and (max-width: 1000px){
+  #c{
+  display: flex;
+  width: 300px;
+  height:300px;
+  align-self: center;
+  justify-content: center;
+  }
+  
+.title{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-size: 120%;
+  text-align: center;
+}
+
+  
+  .buttons{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+  
+  button{
+  font-family: Montserrat, sans-serif;
+  font-size: 100%;
+  border-radius: 5px;
+  color: black;
+}
+  
+/*   #normalButton{
+  background-color: #A8A878;
+  border-color:#6D6D4E;
+}
+
+#fightingButton{
+  background-color: #C03028;
+  border-color:#7D1F1A;
+  color:white;
+}
+
+#flyingButton{
+  background-color: #A890F0;
+  border-color:#6D5E9C;
+}
+
+#poisonButton{
+  background-color: #A040A0;
+  border-color:#682A68;
+  color:white;
+}
+
+#groundButton{
+  background-color: #E0C068;
+  border-color:#927D44;
+}
+
+#rockButton{
+  background-color: #927D44;
+  border-color:#786824;
+}
+
+#bugButton{
+  background-color:#A8B820;
+  border-color:#6D7815;
+}
+
+#ghostButton{
+  background-color:#705898;
+  border-color:#493963;
+  color:white;
+}
+
+#steelButton{
+  background-color:#B8B8D0;
+  border-color:#787887;
+}
+
+#fireButton{
+  background-color:#F08030;
+  border-color:#9C531F;
+}
+
+#waterButton{
+  background-color:#6890F0;
+  border-color:#445E9C;
+}
+
+#grassButton{
+  background-color:#78C850;
+  border-color:#4E8234;
+}
+
+#electricButton{
+  background-color:#F8D030;
+  border-color:#A1871F;
+}
+
+#psychicButton{
+  background-color: #F85888;
+  border-color:#A13959;
+}
+
+#iceButton{
+  background-color:#98D8D8;
+  border-color:#638D8D;
+}
+
+#dragonButton{
+  background-color:#7038F8;
+  border-color:#4924A1;
+  color:white;
+}
+
+#darkButton{
+  background-color:#705848;
+  border-color:#49392F;
+  color:white;
+}
+
+#fairyButton{
+  background-color:#EE99AC;
+  border-color:#9B6470;
+} */
+  
+  .group{
+  display: flex;
+  flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+  
+  .labels{
+  display:flex;
+  column-gap: calc( (calc(100vw) - 30px) * 0.106 - 24px);
+  align-items:center;
+  justify-content: center;
+}
+  
+}
+
+
+
