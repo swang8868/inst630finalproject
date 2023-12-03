@@ -5,11 +5,11 @@
   
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Montserrat';
   font-weight: normal;
   src: url('https://cdn.glitch.global/5e279275-4aaa-4135-863b-4cbb5ea611ee/Montserrat-VariableFont_wght.ttf?v=1697140415521')
-}
+} */
 
 /* default to border-box */
 html {
@@ -33,7 +33,7 @@ html {
 /* adjust typography defaults */
 body {
   margin: 0px;
-  font-family: Montserrat, sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
   color: white;
   
