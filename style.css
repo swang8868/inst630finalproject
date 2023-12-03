@@ -5,24 +5,11 @@
   
 }
 
-/* @font-face {
-  font-family: 'Montserrat';
-  font-weight: normal;
-  src: url('https://cdn.glitch.global/5e279275-4aaa-4135-863b-4cbb5ea611ee/Montserrat-VariableFont_wght.ttf?v=1697140415521')
-} */
 
 /* default to border-box */
 html {
   box-sizing: border-box;
   font-size: 16px;
-  
-  /*grayscale from here https://stackoverflow.com/questions/30192221/is-it-possible-to-turn-an-entire-webpage-to-grayscale-using-css, but it doesn't work too well*/
-/*   -moz-filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    filter: gray; 
-    filter: grayscale(100%); */
-  
-}
 
 
 
@@ -47,11 +34,8 @@ video {
 }
 
 #c{
-/*   background: url(https://cdn.glitch.global/5728b93c-b8f2-4255-a5f9-43e1c4cc8f64/Normal_icon_LA.png?v=1699917472645);
-  background-repeat: no-repeat;
-  background-position: center;  */
   background-color: black;
-/*   background-size: 40vw 40vh; */
+
 }
 
 .title{
