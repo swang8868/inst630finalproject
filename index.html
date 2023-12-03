@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Pokemon Stats</title>
+<!--     <script async src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>  -->
+<!--     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+<!--      <script src="/script.js" type="module"></script> -->
+    
+    <!-- tell them where to find three js first, has to come before .js!!    -->
+    <script  type="importmap">{
+	"imports": {
+		"three": "https://threejs.org/build/three.module.js"
+	  }
+  }</script>
+        <!-- import the webpage's javascript file -->
+
+    <script src="./script.js" type="module"></script>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    
+  </head>
+  <body>
+    
+    <!-- this is the start of content -->
+    <div class="content">
+      
+    
+    <div class="title" role="heading" aria-level="1">
+      Pokémon Average Base Statistics Calculator
+    </div>
+      
+      <div class="introContainer">
+      <div class="intro">
+        Pick any type listed below to start! Stat values are colored from red to blue, which are equivalent to ratings from poor to excellent.
+      </div>
+        </div>
+      
+    <div class="buttons">
+<!--       group 1   -->
+      <div class="group 1">
+        
+        <div role="region" aria-label="First button">
+        
+        <div class="bug">
+      <button type="submit" id="bugButton" class="buttons">
+        Bug
+      </button>
+      </div>
+          </div>
+        
+        <div class="dark">
+        <button type="submit" id="darkButton" class="buttons">
+          Dark
+        </button>
+    </div>
+        
+        <div class="dragon">
+      <button type="submit" id="dragonButton" class="buttons">
+        Dragon
+      </button>
+      </div>
+          
+      </div>
+    
+<!--     group 2   -->
+    <div class="group 2">
+      
+  
+      
+      <div class="electric">
+      <button type="submit" id="electricButton" class="buttons">
+        Electric
+      </button>
+      </div>
+      
+      <div class="fairy">
+        <button type="submit" id="fairyButton" class="buttons">
+          Fairy
+        </button>
+    </div> 
+      
+      <div class="fighting">
+        <button type="submit" id="fightingButton" class="buttons">
+          Fighting
+        </button>
+      </div>
+  
+    </div>
+      
+<!--    group 3  -->
+    <div class="group 3">
+      
+    <div class="fire">
+      <button type="submit" id="fireButton" class="buttons">
+        Fire
+      </button>
+      </div>
+      
+      <div class="flying">
+        <button type="submit" id="flyingButton" class="buttons">
+          Flying
+        </button>
+      </div>
+      
+      <div class="ghost">
+        <button type="submit" id="ghostButton" class="buttons">
+          Ghost
+        </button>
+    </div>
+      
+    </div>
+      
+<!-- group 4       -->
+  <div class="group 4">
+      
+    <div class="grass">
+        <button type="submit" id="grassButton" class="buttons">
+          Grass
+        </button>
+    </div> 
+    
+    <div class="ground">
+        <button type="submit" id="groundButton" class="buttons">
+          Ground
+        </button>
+    </div>
+    
+    <div class="ice">
+        <button type="submit" id="iceButton" class="buttons">
+          Ice
+        </button>
+    </div>
+           
+    
+    </div>
+      
+<!--  group 5-->
+      <div class="group 5">
+      
+    <div class="normal">
+        <button type="submit" id="normalButton" class="buttons">
+          Normal
+        </button>
+      </div>
+        
+        <div class="poison"> 
+      <button type="submit" id="poisonButton" class="buttons">
+        Poison
+      </button>
+    </div>
+
+      <div class="psychic">
+        <button type="submit" id="psychicButton" class="buttons">
+          Psychic
+        </button>
+    </div>
+     
+    </div>
+
+<!--  group 6-->
+<div class="group 6">
+      
+        <div class="rock">
+        <button type="submit" id="rockButton" class="buttons">
+          Rock
+        </button>
+    </div>
+      
+      <div class="steel">
+        <button type="submit" id="steelButton" class="buttons">
+          Steel
+        </button>
+    </div> 
+      
+  <div role="region" aria-label="Last button">
+  <div class="water">
+        <button type="submit" id="waterButton" class="buttons">
+          Water
+        </button>
+    </div>
+    
+    </div>
+    
+    </div>
+      
+    </div>
+      
+      
+      <div class="type" role="status">
+        
+      </div>
+    
+    <div>
+      <canvas id="c" role="img" aria-label="A bar chart showing stat values. The minimum value is about 50 and the maximum is about 110"></canvas>
+    </div>
+      
+  
+      
+      <div class="labels">
+        
+<!--         <div class="statGroup">
+           -->
+        <div class="statGroup">
+          
+        
+          <div id="hpText" role="region" aria-label="Hit Points">
+          HP&numsp;
+        </div>
+          <div id="hpValue">
+<!--             val -->
+          </div>
+          <div id="hpRating" class="sr-only">
+<!--             rating -->
+          </div>
+          </div>
+<!--         </div>
+         -->
+        <div class="statGroup">
+          <div id="atkText" role="region" aria-label="Attack">
+          Atk
+        </div>
+          <div id="atkValue">
+<!--             val -->
+          </div>
+          <div id="atkRating" class="sr-only">
+<!--             rating -->
+          </div>
+        </div>
+        
+        <div class="statGroup">
+          <div id="defText" role="region" aria-label="Defense">
+          Def
+        </div>
+          <div id="defValue">
+<!--             val -->
+          </div>
+          <div id="defRating" class="sr-only">
+<!--             rating -->
+          </div>
+        </div>
+        
+        <div class="statGroup">
+          <div id="spaText" role="region" aria-label="Special Attack">
+          SpA
+        </div>
+          <div id="spaValue">
+<!--             val -->
+          </div>
+          <div id="spaRating" class="sr-only">
+<!--             rating -->
+          </div>
+        </div>
+        
+        
+        <div class="statGroup">
+          <div id="spdText" role="region" aria-label="Special Defense">
+          SpD
+        </div>
+          <div id="spdValue">
+<!--             val -->
+          </div>
+          <div id="spdRating" class="sr-only">
+<!--             rating -->
+          </div>
+        </div>
+        
+        
+        <div class="statGroup">
+          <div id="speText" role="region" aria-label="Speed">
+          Spe
+        </div>
+          <div id="speValue">
+<!--             val -->
+          </div>
+          <div id="speRating" class="sr-only">
+<!--             rating -->
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+          
+  </body>
+</html>
