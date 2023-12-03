@@ -26,6 +26,14 @@ body {
   
 }
 
+a:link{
+  color: #cceeee;
+}
+
+a:visited{
+#00eeee
+}
+  
 /* images and videos max out at full width */
 img,
 video {
