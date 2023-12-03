@@ -26,12 +26,8 @@ body {
   
 }
 
-a:link{
-  color: #cceeee;
-}
-
-a:visited{
-color:#00eeee;
+a{
+  color: lightblue;
 }
   
 /* images and videos max out at full width */
