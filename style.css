@@ -1,9 +1,8 @@
-/* a minimalist set of CSS resets */
-
 :root{
-  background-color:black;
-  
+  background-color:black; 
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
 /* default to border-box */
@@ -20,10 +19,9 @@ html {
 /* adjust typography defaults */
 body {
   margin: 0px;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   color: white;
-  
 }
 
 a{
